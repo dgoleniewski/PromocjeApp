@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PromocjeApp</string>
+    <string name="login">Zaloguj</string>
+    <string name="email">Email</string>
+    <string name="password">Hasło</string>
+    <string name="register">Zarejestruj się</string>
+    <string name="your_email_com">Twój@email.com</string>
+    <string name="type_your_email">Wpisz swój email</string>
+    <string name="type_your_password">Wpisz swoje hasło</string>
+    <string name="retype_password">Powtórz hasło</string>
+</resources>

@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "924040948925",
+    "firebase_url": "https://opinie-93a18.firebaseio.com",
+    "project_id": "opinie-93a18",
+    "storage_bucket": "opinie-93a18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924040948925:android:b643aa99e5c1470b929bd4",
+        "android_client_info": {
+          "package_name": "com.e.promocje"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924040948925-07m4t6t9ln0ul3pei4pf023p35c0494f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.e.promocje",
+            "certificate_hash": "c7ad4e676556da5ce371aa8a20f0ab3fc0175241"
+          }
+        },
+        {
+          "client_id": "924040948925-og554m56iu0gbminjs2o274g90at012p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCQroo37sFjZtIu-BHYKboHXqw0jJ1lr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924040948925-og554m56iu0gbminjs2o274g90at012p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924040948925:android:57821ff3bc8f7ef5929bd4",
+        "android_client_info": {
+          "package_name": "com.e.promocjeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924040948925-og554m56iu0gbminjs2o274g90at012p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCQroo37sFjZtIu-BHYKboHXqw0jJ1lr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924040948925-og554m56iu0gbminjs2o274g90at012p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -13,16 +17,15 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ListDiscountsActivity extends AppCompatActivity {
-    private DatabaseReference mDatabase;
     private RecyclerView recyclerView;
     private MyRecyclerViewAdapter adapter;
     private List<Discount> discounts;
+    private FloatingActionButton newDiscountFloatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_discounts);
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         Discount discount = new Discount();
         discount.setBasicPrice(3297);
@@ -57,11 +60,18 @@ public class ListDiscountsActivity extends AppCompatActivity {
         discounts = new LinkedList<>();
         discounts.add(discount);
 
-        mDatabase.setValue(discounts);
         recyclerView = findViewById(R.id.recyclerView);
+        newDiscountFloatingActionButton = findViewById(R.id.newDiscountFloatingActionButton);
         adapter = new MyRecyclerViewAdapter(this, discounts);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        newDiscountFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListDiscountsActivity.this, AddNewDiscount.class);
+                startActivity(intent);
+            }
+        });
     }
 }
 

@@ -35,7 +35,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         discount = discounts.get(position);
         holder.imageView.setImageBitmap(discount.getImage());
         holder.titleTextView.setText(discount.getTitle());
-        holder.opinionTextView.setText(discount.getPoints());
+        holder.opinionTextView.setText(String.valueOf(discount.getPoints()));
         holder.basicPriceTextView.setText(String.valueOf(discount.getBasicPrice()));
         holder.discountPriceTextView.setText(String.valueOf(discount.getDiscountPrice()));
     }

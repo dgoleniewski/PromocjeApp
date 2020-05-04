@@ -6,7 +6,7 @@ import java.util.Calendar;
 
 public class Discount {
     private String title, description, link, code;
-    private int points;
+    private int points = 0;
     private double basicPrice, discountPrice;
     private Bitmap image;
     private Calendar endOfDiscountDate, publishDate;

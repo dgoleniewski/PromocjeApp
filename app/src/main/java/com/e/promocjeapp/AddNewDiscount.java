@@ -19,14 +19,14 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class AddNewDiscount extends AppCompatActivity {
     private EditText titleEditText, descriptionEditText, linkEditText, codeEditText, basicPriceEditText, discountPriceEditText, endOfDiscountEditText;
     private Button addDiscountButton;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private FirebaseFirestore db;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_discount);
-
+        db = FirebaseFirestore.getInstance();
 
         titleEditText = findViewById(R.id.titleEditText);
         descriptionEditText = findViewById(R.id.descriptionEditText);
@@ -46,9 +46,9 @@ public class AddNewDiscount extends AppCompatActivity {
                 String code = codeEditText.getText().toString();
                 String basicPrice = basicPriceEditText.getText().toString();
                 String discountPrice = discountPriceEditText.getText().toString();
-                String endOdDiscount = endOfDiscountEditText.getText().toString();
-                if(!title.equals("") && !description.equals("") && !link.equals("") && !code.equals("") && !basicPrice.equals("") && !discountPrice.equals("") && !endOdDiscount.equals("")){
-                    Discount discount = new Discount(title, description, link, code, Double.parseDouble(basicPrice), Double.parseDouble(discountPrice), endOdDiscount);
+                String endOfDiscount = endOfDiscountEditText.getText().toString();
+                if(!title.equals("") && !description.equals("") && !link.equals("") && !code.equals("") && !basicPrice.equals("") && !discountPrice.equals("") && !endOfDiscount.equals("")){
+                    Discount discount = new Discount(title, description, link, code, Double.parseDouble(basicPrice), Double.parseDouble(discountPrice), endOfDiscount);
                     db.collection("Discounts").add(discount).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                         @Override
                         public void onSuccess(DocumentReference documentReference) {

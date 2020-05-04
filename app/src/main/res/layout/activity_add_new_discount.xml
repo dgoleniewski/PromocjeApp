@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
     tools:context=".AddNewDiscount">
 
     <TextView
@@ -19,8 +21,10 @@
 
     <EditText
         android:id="@+id/titleEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,9 +44,11 @@
 
     <EditText
         android:id="@+id/descriptionEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,9 +68,11 @@
 
     <EditText
         android:id="@+id/linkEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +84,7 @@
         android:id="@+id/codeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kod promocyjny"
+        android:text='Kod promocyjny (jeśli brak wpisz "-")'
         app:layout_constraintBottom_toTopOf="@+id/codeEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -84,9 +92,11 @@
 
     <EditText
         android:id="@+id/codeEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,9 +116,11 @@
 
     <EditText
         android:id="@+id/basicPriceEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,9 +140,11 @@
 
     <EditText
         android:id="@+id/discountPriceEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,10 +164,13 @@
 
     <EditText
         android:id="@+id/endOfDiscountEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
+        android:hint="DD/MM/RRRR"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -172,9 +189,11 @@
 
     <EditText
         android:id="@+id/imageEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"

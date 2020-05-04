@@ -8,4 +8,5 @@
     <string name="type_your_email">Wpisz swój email</string>
     <string name="type_your_password">Wpisz swoje hasło</string>
     <string name="retype_password">Powtórz hasło</string>
+    <string name="go_to_discount">Przejdź do okazji</string>
 </resources>

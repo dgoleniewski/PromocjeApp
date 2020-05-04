@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddNewDiscount"></activity>
+        <activity android:name=".DiscountActivity"></activity>
+        <activity android:name=".AddNewDiscount" />
         <activity android:name=".ListDiscountsActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity">

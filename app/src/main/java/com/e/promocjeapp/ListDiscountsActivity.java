@@ -48,7 +48,8 @@ public class ListDiscountsActivity extends AppCompatActivity {
                             document.get("code").toString(),
                             document.getDouble("basicPrice"),
                             document.getDouble("discountPrice"),
-                            document.get("endOfDiscountDate").toString()
+                            document.get("endOfDiscountDate").toString(),
+                            document.getId().toString()
                     ));
                 }
                 adapter = new MyRecyclerViewAdapter(ListDiscountsActivity.this, discounts);
@@ -60,26 +61,6 @@ public class ListDiscountsActivity extends AppCompatActivity {
         discounts = new LinkedList<>();
         recyclerView = findViewById(R.id.recyclerView);
         newDiscountFloatingActionButton = findViewById(R.id.newDiscountFloatingActionButton);
-
-        recyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
-            @Override
-            public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
-                Intent intent = new Intent(ListDiscountsActivity.this, DiscountActivity.class);
-                intent.putExtra("document","q");
-                startActivity(intent);
-                return true;
-            }
-
-            @Override
-            public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
-
-            }
-
-            @Override
-            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-
-            }
-        });
 
         newDiscountFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF3E0"
     tools:context=".MainActivity">
 
     <EditText
@@ -47,6 +48,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -60,6 +62,7 @@
         android:layout_marginStart="110dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="110dp"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:text="@string/register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -2,16 +2,13 @@ package com.e.promocjeapp;
 
 import android.graphics.Bitmap;
 
-import java.util.Calendar;
-import java.util.TimeZone;
-
 public class Discount {
     private String title, description, link, code;
-    private int points = 0;
     private double basicPrice, discountPrice;
     private Bitmap image;
     private String endOfDiscountDate;
     private String publishDate;
+    private String id;
 
     public Discount() {
     }
@@ -24,6 +21,25 @@ public class Discount {
         this.basicPrice = basicPrice;
         this.discountPrice = discountPrice;
         this.endOfDiscountDate = endOfDiscountDate;
+    }
+
+    public Discount(String title, String description, String link, String code, double basicPrice, double discountPrice, String endOfDiscountDate, String id) {
+        this.title = title;
+        this.description = description;
+        this.link = link;
+        this.code = code;
+        this.basicPrice = basicPrice;
+        this.discountPrice = discountPrice;
+        this.endOfDiscountDate = endOfDiscountDate;
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getEndOfDiscountDate() {
@@ -88,14 +104,6 @@ public class Discount {
 
     public void setCode(String code) {
         this.code = code;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
     }
 
     public Bitmap getImage() {

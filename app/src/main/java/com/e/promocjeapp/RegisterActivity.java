@@ -36,8 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
         passwordRetypeEditText = findViewById(R.id.passwordRetypeEditText);
         signInButton = findViewById(R.id.signInButton);
 
-        emailEditText.setText(intent.getStringExtra("email"));
-        passwordEditText.setText(intent.getStringExtra("password"));
+        emailEditText.setText(getIntent().getStringExtra("email"));
+        passwordEditText.setText(getIntent().getStringExtra("password"));
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +60,9 @@ public class RegisterActivity extends AppCompatActivity {
                             }
                         }
                     });
+                }
+                else{
+                    Toast.makeText(RegisterActivity.this, "Wypełnij pola formularza poprawnie", Toast.LENGTH_LONG).show();
                 }
             }
         });

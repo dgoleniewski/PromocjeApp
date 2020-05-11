@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,9 +19,11 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.squareup.picasso.Picasso;
 
 public class DiscountActivity extends AppCompatActivity {
     private TextView titleTextView, descriptionTextView, pointsTextView, basicPriceTextView, discountPriceTextView, dateTextView, codeTextView;
+    private ImageView imageView;
     private Button linkButton;
     private FirebaseFirestore db;
 
@@ -36,6 +39,7 @@ public class DiscountActivity extends AppCompatActivity {
         dateTextView = findViewById(R.id.dateTextView);
         codeTextView = findViewById(R.id.codeTextView);
         linkButton = findViewById(R.id.linkButton);
+        imageView = findViewById(R.id.imageView);
 
         db.collection("Discounts").document(getIntent().getStringExtra("document")).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -47,6 +51,7 @@ public class DiscountActivity extends AppCompatActivity {
                 discountPriceTextView.setText(document.getDouble("discountPrice").toString());
                 dateTextView.setText(document.getString("endOfDiscountDate"));
                 codeTextView.setText(document.getString("code"));
+                Picasso.get().load(document.getString("image")).into(imageView);
                 linkButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

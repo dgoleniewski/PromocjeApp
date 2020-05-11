@@ -23,10 +23,11 @@
                 android:id="@+id/discountPriceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
                 android:text="TextView"
-                android:textSize="14sp"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/basicPriceTextView"
                 app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
@@ -38,6 +39,7 @@
                 android:layout_marginTop="20dp"
                 android:text="TextView"
                 android:textSize="14sp"
+                android:textStyle="italic"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 

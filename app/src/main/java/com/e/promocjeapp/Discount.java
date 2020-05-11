@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 public class Discount {
     private String title, description, link, code;
     private double basicPrice, discountPrice;
-    private Bitmap image;
+    private String image;
     private String endOfDiscountDate;
     private String publishDate;
     private String id;
@@ -13,7 +13,7 @@ public class Discount {
     public Discount() {
     }
 
-    public Discount(String title, String description, String link, String code, double basicPrice, double discountPrice, String endOfDiscountDate) {
+    public Discount(String title, String description, String link, String code, double basicPrice, double discountPrice, String endOfDiscountDate, String image) {
         this.title = title;
         this.description = description;
         this.link = link;
@@ -21,9 +21,10 @@ public class Discount {
         this.basicPrice = basicPrice;
         this.discountPrice = discountPrice;
         this.endOfDiscountDate = endOfDiscountDate;
+        this.image = image;
     }
 
-    public Discount(String title, String description, String link, String code, double basicPrice, double discountPrice, String endOfDiscountDate, String id) {
+    public Discount(String title, String description, String link, String code, double basicPrice, double discountPrice, String endOfDiscountDate, String id, String image) {
         this.title = title;
         this.description = description;
         this.link = link;
@@ -32,6 +33,7 @@ public class Discount {
         this.discountPrice = discountPrice;
         this.endOfDiscountDate = endOfDiscountDate;
         this.id = id;
+        this.image = image;
     }
 
     public String getId() {
@@ -106,11 +108,11 @@ public class Discount {
         this.code = code;
     }
 
-    public Bitmap getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Bitmap image) {
+    public void setImage(String image) {
         this.image = image;
     }
 }

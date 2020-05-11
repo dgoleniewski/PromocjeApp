@@ -17,7 +17,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class AddNewDiscount extends AppCompatActivity {
-    private EditText titleEditText, descriptionEditText, linkEditText, codeEditText, basicPriceEditText, discountPriceEditText, endOfDiscountEditText;
+    private EditText titleEditText, descriptionEditText, linkEditText, codeEditText, basicPriceEditText, discountPriceEditText, endOfDiscountEditText, imageEditText;
     private Button addDiscountButton;
     private FirebaseFirestore db;
 
@@ -36,6 +36,7 @@ public class AddNewDiscount extends AppCompatActivity {
         discountPriceEditText = findViewById(R.id.discountPriceEditText);
         endOfDiscountEditText = findViewById(R.id.endOfDiscountEditText);
         addDiscountButton = findViewById(R.id.addDiscountButton);
+        imageEditText = findViewById(R.id.imageEditText);
 
         addDiscountButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,8 +48,9 @@ public class AddNewDiscount extends AppCompatActivity {
                 String basicPrice = basicPriceEditText.getText().toString();
                 String discountPrice = discountPriceEditText.getText().toString();
                 String endOfDiscount = endOfDiscountEditText.getText().toString();
+                String imageUrl = imageEditText.getText().toString();
                 if(!title.equals("") && !description.equals("") && !link.equals("") && !code.equals("") && !basicPrice.equals("") && !discountPrice.equals("") && !endOfDiscount.equals("")){
-                    Discount discount = new Discount(title, description, link, code, Double.parseDouble(basicPrice), Double.parseDouble(discountPrice), endOfDiscount);
+                    Discount discount = new Discount(title, description, link, code, Double.parseDouble(basicPrice), Double.parseDouble(discountPrice), endOfDiscount, imageUrl);
                     db.collection("Discounts").add(discount).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                         @Override
                         public void onSuccess(DocumentReference documentReference) {

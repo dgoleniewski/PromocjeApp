@@ -49,7 +49,8 @@ public class ListDiscountsActivity extends AppCompatActivity {
                             document.getDouble("basicPrice"),
                             document.getDouble("discountPrice"),
                             document.get("endOfDiscountDate").toString(),
-                            document.getId().toString()
+                            document.getId().toString(),
+                            document.get("image").toString()
                     ));
                 }
                 adapter = new MyRecyclerViewAdapter(ListDiscountsActivity.this, discounts);

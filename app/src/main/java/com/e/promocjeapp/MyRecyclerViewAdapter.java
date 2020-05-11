@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder> {
@@ -34,11 +36,11 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         discount = discounts.get(position);
-        holder.imageView.setImageBitmap(discount.getImage());
         holder.titleTextView.setText(discount.getTitle());
         holder.basicPriceTextView.setText(String.valueOf(discount.getBasicPrice()));
         holder.discountPriceTextView.setText(String.valueOf(discount.getDiscountPrice()));
         holder.idTextView.setText(discount.getId());
+        Picasso.get().load(discount.getImage()).into(holder.imageView);
     }
 
     @Override

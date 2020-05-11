@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF3E0"
     tools:context=".AddNewDiscount">
 
     <TextView
@@ -171,6 +170,7 @@
         android:ems="10"
         android:hint="DD/MM/RRRR"
         android:inputType="textPersonName"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
